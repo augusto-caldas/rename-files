@@ -1,2 +1,2 @@
 # rename-files
-Rename multiple files by removing all content inside ( ) and [ ].
+Automatically rename multiple files removing all content inside ( ) and [ ].
