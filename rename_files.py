@@ -6,6 +6,7 @@ def rename_files(directory):
         # Remove content within [] and ()
         new_filename = re.sub(r'\[.*?\]|\(.*?\)', '', filename)  
         # Remove whitespace
+        new_filename = re.sub(r'\s+\.', '.', new_filename)
         new_filename = new_filename.strip()  
         # Only rename if there are changes
         if new_filename != filename:  
