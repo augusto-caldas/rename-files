@@ -3,9 +3,9 @@ import re
 
 def rename_files(directory):
     for filename in os.listdir(directory):
-        # Remove content within [] and ()
-        new_filename = re.sub(r'\[.*?\]|\(.*?\)', '', filename)  
-        # Remove whitespace
+        # Remove brackets and content inside of it
+        new_filename = re.sub(r'\[.*?\]|\(.*?\)|<.*?>|{.*?}', '', filename)
+        # Remove whitespace before extension
         new_filename = re.sub(r'\s+\.', '.', new_filename)
         new_filename = new_filename.strip()  
         # Only rename if there are changes
