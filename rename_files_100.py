@@ -1,7 +1,7 @@
 import os
 
 def rename_files(directory, season, extension):
-    counter = 892
+    counter = 1
     for filename in os.listdir(directory):
         if counter < 10:
             new_filename = f"S{season}E00{counter}.{extension}"
